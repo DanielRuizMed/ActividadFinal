@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi aplicación de asignaturas</title>
+</head>
+<body>
+	<h5 th:inline="text">Hola '[[${usuario.nombreYapellidos}]]'  ([[${usuario.username}]]), 
+	tu rol es [[${usuario.rol.rol}]]. </h5>
+	<b>INICIO:</b> Aplicación de asignaturas <b>APP</b>.
+	<ul> MENÚ:
+	    <li> <a href="/app/listarUsuario?rol=CONSULTA">Consultar usuarios por rol</a> </li>
+		<li th:if="${usuario.rol.rol == 'ADMIN'}"> <a href="/app/listarAsignaturas">Ver listado de asignaturas</a> </li>
+	</ul>
+</body>

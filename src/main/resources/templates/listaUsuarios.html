@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Página de listado de usuarios</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	
+	<h3>*** Mete el rol del usuario por la URL, si deseas modificar la busqueda</h3>
+
+    Lista de usuarios:
+	<table border='1'>
+		    <tr>
+				<th>Nombre y Apellidos</th>
+				<th>UserName</th>
+			</tr>
+		<th:block th:each="per : ${listaUsu}">
+			<tr>
+				<td th:text="${per.nombreYapellidos}"></td>
+				<td th:text="${per.username}"></td>
+			</tr>
+		</th:block>	
+	</table> 
+	<br/>		
+</body>
+</html>
