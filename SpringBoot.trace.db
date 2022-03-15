@@ -182,3 +182,7 @@ select * from usuario where rol=? [42122-200]
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+2022-03-15 11:24:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ASIGNATURA" no encontrada
+Table "ASIGNATURA" not found; SQL statement:
+insert into asignatura (id, nombre, descripcion, curso) select 1, 'MP', 'asignatura de programación básica', 1 from dual where not exists (select 1 from asignatura where id = 1) [42102-200]

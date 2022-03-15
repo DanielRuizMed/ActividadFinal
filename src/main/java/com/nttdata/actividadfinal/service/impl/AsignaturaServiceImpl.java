@@ -17,8 +17,27 @@ public class AsignaturaServiceImpl implements AsignaturaService{
 	
 	@Override
 	public List<Asignatura> listar() {
-		// TODO Auto-generated method stub
 		return actividadJPA.findAll();
+	}
+
+	@Override
+	public Asignatura getById(Integer id) {
+		return actividadJPA.findById(id).orElse(null);
+	}
+
+	@Override
+	public void deleteAll() {
+		actividadJPA.deleteAll();
+	}
+
+	@Override
+	public void deleteById(Integer id) {
+		actividadJPA.deleteById(id);
+	}
+
+	@Override
+	public Asignatura insertar(Asignatura asig) {
+		return actividadJPA.save(asig);
 	}
 
 }
