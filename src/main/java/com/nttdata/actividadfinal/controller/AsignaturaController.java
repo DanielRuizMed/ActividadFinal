@@ -42,7 +42,7 @@ public class AsignaturaController {
 	
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@GetMapping("/listarAsignaturas")
-	public String listarAsig(Model model){
+	public String listarAsig(Model model) throws Exception{
 		model.addAttribute("listaAsig", asignatura.listar());
 		return "asignaturas";
 	}

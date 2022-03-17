@@ -6,13 +6,13 @@ import com.nttdata.actividadfinal.entity.Asignatura;
 
 public interface AsignaturaService {
 
-	public List<Asignatura> listar();
+	public List<Asignatura> listar() throws Exception;
 
-	public Asignatura getById(Integer id);
+	public Asignatura getById(Integer id) throws Exception;
 
-	public void deleteAll();
+	public void deleteAll() throws Exception;
 
-	public void deleteById(Integer id);
+	public void deleteById(Integer id) throws Exception;
 
-	public Asignatura insertar(Asignatura asig);
+	public Asignatura insertar(Asignatura asig) throws Exception;
 }
